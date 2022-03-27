@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "discord-reminder-bot"
+version = "0.3.0"
+description = "Discord bot that allows you to set date, cron and interval reminders."
+authors = ["NexusLove <nexusloveyt@gmail.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+homepage = "https://github.com/NexusLove/discord-reminder-bot"
+repository = "https://github.com/NexusLove/discord-reminder-bot"
+keywords = [
+  "bot",
+  "discord",
+  "discord-reminder-bot",
+  "discord-py-slash-command",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/NexusLove/discord-reminder-bot/issues"
+
+[tool.poetry.scripts]
+bot = "discord_reminder_bot.main:start"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+"discord.py" = "^1.7.3"
+python-dotenv = "^0.20.0"
+discord-py-slash-command = "^3.0.3"
+APScheduler = "^3.9.1"
+dateparser = "^1.1.1"
+SQLAlchemy = "^1.4.32"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
